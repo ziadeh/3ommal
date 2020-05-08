@@ -5,7 +5,7 @@ $(document).ready(function () {
       initialCountry: "ps",
       placeholderNumberType: "MOBILE",
       dropdownContainer: document.body,
-      utilsScript: "/js/vendors/intlTellInput/utils.js",
+      utilsScript: "./intlTellInput/utils.js",
     });
     var countryData = window.intlTelInputGlobals.getCountryData(),
       input = document.querySelector("#phone");
@@ -17,7 +17,7 @@ $(document).ready(function () {
   
     window.intlTelInput(input, {
       preferredCountries: ["ps"],
-      utilsScript: "/3ommal/js/vendors/intlTellInput/utils.js?1585994360633", // just for formatting/placeholders etc
+      utilsScript: "./intlTellInput/utils.js?1585994360633", // just for formatting/placeholders etc
     });
   
     $(".modal-view").click(function () {
