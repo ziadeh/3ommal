@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Droid+Sans+Mono');
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    font-size: 1em;
+    direction: rtl;
+}
+
+.text-white { color: $color-white}
+.text-black { color: $color-black}
+.text-blue { color: $color-blue}
+.text-orange { color: $color-orange}
+.text-silver { color: $color-silver}
+.text-gray { color: $color-gray}
+.text-gray-light { color: $color-gray-light}
+.text-gray-lighter { color: $color-gray-lighter}
+.text-gray-dark { color: $color-gray-dark}
+
+.bg-white { background-color: $color-white}
+.bg-black { background-color: $color-black}
+.bg-blue { background-color: $color-blue}
+.bg-orange { background-color: $color-orange}
+.bg-silver { background-color: $color-silver}
+.bg-gray { background-color: $color-gray}
+.bg-gray-light { background-color: $color-gray-light}
+.bg-gray-lighter { background-color: $color-gray-lighter}
+.bg-gray-dark { background-color: $color-gray-dark}
+
+
+.text-center { text-align: center;}
+.text-left { text-align: left;}
+.text-right { text-align: right;}
+
+.text-lighter { font-weight: lighter;}
+
+.bg-gray {
+    background-color:$color-gray-lighter;
+}
+
+.m-t-b-20 { margin: 20px 0; }
+
+.m-t-10 { margin-top: 10px; }
+.m-t-20 { margin-top: 20px; }
+.m-t-30 { margin-top: 30px; }
+.m-t-40 { margin-top: 40px; }
+.m-t-50 { margin-top: 50px; }
+.m-t-60 { margin-top: 60px; }
+.m-t-70 { margin-top: 70px; }
+.m-t-80 { margin-top: 80px; }
+.m-t-90 { margin-top: 90px; }
+.m-t-100 { margin-top: 100px; }
+
+.m-b-10 { margin-bottom: 10px; }
+.m-b-20 { margin-bottom: 20px; }
+.m-b-30 { margin-bottom: 30px; }
+.m-b-40 { margin-bottom: 40px; }
+.m-b-50 { margin-bottom: 50px; }
+.m-b-60 { margin-bottom: 60px; }
+.m-b-70 { margin-bottom: 70px; }
+.m-b-80 { margin-bottom: 80px; }
+.m-b-90 { margin-bottom: 90px; }
+.m-b-100 { margin-bottom: 100px; }
+
+
+.w-50-perc { width:50% }
+
+
+h1 {
+    font-size: 150%;
+}
+b {
+    font-weight: bold;
+}
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+input, button {
+    height: 35px;
+    margin: 0;
+    padding: 6px 12px;
+    border-radius: 2px;
+    font-family: inherit;
+    font-size: 100%;
+    color: inherit;
+}
+.container {
+    max-width: 997px;
+    margin: 0 auto;  
+}
+
+@media(min-width: 997px) {
+    body {
+        font-size:1.5em;
+    }
+}

@@ -1,0 +1,11 @@
+.box-container {
+    width: 90%;
+    background-color:$color-white;
+    min-height: 169px;
+    border-radius: $border-radius-lg;
+    display: block;
+    margin: 0 auto; 
+    .box-content {
+        padding: 15px; 
+    }
+}

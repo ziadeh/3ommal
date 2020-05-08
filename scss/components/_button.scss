@@ -1,0 +1,46 @@
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: .8rem 1rem .5rem 1rem;
+    font-size: 1em;
+    line-height: 1.5;
+    border-radius: $border-radius-sm;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    border: none;
+    &.btn-primary {
+        color: $color-white;
+        background-color: $color-blue;
+        &:active {
+            background-color: $color-orange;
+        }
+    }
+
+    &.btn-n-bg {
+        background:transparent;
+        &:active {
+            background-color: $color-gray-lighter;
+        }
+    }
+
+    &.btn-gray {
+        background-color: $color-gray-lighter;
+        color:$color-gray-dark;
+        &:active {
+            background-color: $color-gray;
+            color:$color-white;
+        }
+    }
+    [type=reset], [type=submit], button, html [type=button] {
+        -webkit-appearance: button;
+    }
+    &.btn:not(:disabled):not(.disabled) {
+        cursor: pointer;
+    }
+}

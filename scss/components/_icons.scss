@@ -1,0 +1,20 @@
+.icon {
+    background-image: url($icons+"icons.svg");
+    background-size: 900px;
+    background-position:  0 -13px;
+    text-indent: -9999px;
+    display: inline-block;
+
+    &.settings {
+        background-size: 650px;
+        background-position: -80px -12px; 
+        width: 34px;
+        height: 41px;
+    }
+    &.profile {
+        background-size: 650px;
+        background-position: -146px -9px;
+        width: 34px;
+        height: 41px;
+    }
+}

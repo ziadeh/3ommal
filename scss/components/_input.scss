@@ -1,0 +1,50 @@
+$char-w: 1ch;
+$gap: .5*$char-w;
+$n-char: 6;
+$in-w: $n-char*($char-w + $gap);
+
+.input-tel {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    display: block;
+    padding: .5rem .75rem;
+    line-height: 1.5;
+    background-color: #fff;
+    background-clip: padding-box;
+    border-radius: 0;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    position: relative;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    margin-bottom: 0;
+    border-color:$color-silver;
+    border-width: 0 0 2px 0;
+    height: 50px;
+    direction: ltr;
+    letter-spacing: 0.3ch;
+    width: 230px;
+    font-size: 16px;
+}
+.iti {
+    direction: ltr;
+}
+
+.input-confirm {
+	display: block;
+	margin: 0em auto;
+	border: none;
+    padding: 0;
+    height: 60px;
+	width: $in-w;
+	background: repeating-linear-gradient(90deg, 
+		$color-silver 0, $color-silver $char-w, 
+		transparent 0, transparent $char-w + $gap) 
+		0 100%/ #{$in-w - $gap} 1px no-repeat;
+	font: 5ch droid sans mono, consolas, monospace;
+    letter-spacing: $gap; 
+    direction: ltr;
+      &:focus {
+        outline: none;
+        color: $color-blue;
+      }
+}
