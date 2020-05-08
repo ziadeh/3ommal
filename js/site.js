@@ -17,7 +17,7 @@ $(document).ready(function () {
   
     window.intlTelInput(input, {
       preferredCountries: ["ps"],
-      utilsScript: "/js/vendors/intlTellInput/utils.js?1585994360633", // just for formatting/placeholders etc
+      utilsScript: "./utils.js?1585994360633", // just for formatting/placeholders etc
     });
   
     $(".modal-view").click(function () {
