@@ -1,0 +1,144 @@
+<html lang="ar">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>3ommal Website</title>
+    <meta name="description" content="" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./images/logo/logo-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/logo/logo-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./images/logo/logo-16x16.png"
+    />
+    <link rel="mask-icon" href="./images/logo/mask-icon.svg" color="#0e60ba" />
+    <meta name="theme-color" content="#0e60ba" />
+    <link rel="stylesheet" href="./css/style.css" type="text/css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="header">
+        <div class="container">
+          <div class="header-content-right"></div>
+          <div class="header-content-center">
+            معلومات الملف الشخصي
+          </div>
+          <div class="header-content-left">
+            <a href="home.html"><i class="icon arrow-left"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <form class="form">
+          <div class="form-group">
+            <label>الاسم رباعي</label>
+            <input type="text" class="from-control" placeholder="الاسم رباعي" />
+          </div>
+          <div class="form-group">
+            <label>رقم الهوية</label>
+            <input
+              type="number"
+              class="from-control"
+              placeholder="أدخل رقم الهوية هنا"
+            />
+          </div>
+          <div class="form-group">
+            <label>نوع الهوية</label>
+            <div class="multi-input">
+              <div class="ck-button">
+                <label>
+                  <input type="radio" name="id" value="1" /><span>فلسطينية</span>
+                </label>
+              </div>
+              <div class="ck-button">
+                <label>
+                  <input type="radio" name="id" value="1" /><span>اسرائيلية</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>تاريخ الميلاد</label>
+            <div class="input-with-icon">
+            <input
+              type="date"
+              class="from-control myDate"
+            />
+            <i class="icon icon-date"></i>
+          </div>
+          </div>
+          <div class="form-group">
+            <label>الجنس</label>
+            <div class="multi-input">
+              <div class="ck-button">
+                <label>
+                  <input type="radio" name="gender" value="m" /><span>ذكر</span>
+                </label>
+              </div>
+              <div class="ck-button">
+                <label>
+                  <input type="radio" name="gender" value="f" /><span>انثى</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>الحالة الاجتماعية</label>
+            <div class="multi-input">
+              <div class="ck-button">
+                <label>
+                  <input type="radio" name="m" value="m" /><span>اعزب</span>
+                </label>
+              </div>
+              <div class="ck-button">
+                <label>
+                  <input type="radio" name="m" value="f" /><span>متزوج</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>المدينه</label>
+            <div class="custom-select">
+              <select>
+                <option>اختر المدينة</option>
+                <option value="0">القُدس</option>
+                <option value="0">الله</option>
+                <option value="0">نابلس</option>
+                <option value="0">بيت لحم</option>
+                <option value="0">غزّة</option>
+                <option value="0">أريحا</option>
+                <option value="0">جنين</option>
+                <option value="0">صَفَد</option>
+                <option value="0">بئرالسبع</option>
+                <option value="0">الناصرة</option>
+                <option value="0">حيفا</option>
+                <option value="0">الخليل</option>
+                <option value="0">طولكرم</option>
+                <option value="0">الرَّملة</option>
+                <option value="0">اللِّد</option>
+                <option value="0">طبريا</option>
+              </select>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="./js/vendors/select-field.js"></script>
+    <script>
+      document.querySelector(".myDate").valueAsDate = new Date();
+    </script>
+  </body>
+</html>

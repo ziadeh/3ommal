@@ -17,4 +17,46 @@
         width: 34px;
         height: 41px;
     }
+    &.money {
+        width: 45px;
+        height: 45px;
+        background-position: -216px -11px;
+        background-size: 680px;
+    }
+    &.conversation {
+        width: 45px;
+        height: 45px;
+        background-position: -286px -11px;
+        background-size: 680px;
+    }
+    &.icon-form {
+        width: 45px;
+        height: 45px;
+        background-position: -348px -11px;
+        background-size: 680px;
+    }
+    &.work {
+        width: 45px;
+        height: 47px;
+        background-position: -419px -11px;
+        background-size: 680px;
+    }
+    &.arrow-left {
+        width: 45px;
+        height: 47px;
+        background-position: -1289px 6px;
+        background-size: 340px;
+    }
+    &.request {
+        width: 45px;
+        height: 47px;
+        background-position: -1483px -2px;
+        background-size: 400px;
+    }
+    &.icon-date {
+        width: 30px;
+        height: 30px;
+        background-position: -631px -19px;
+        background-size: 680px;
+    }
 }

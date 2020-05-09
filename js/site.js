@@ -29,6 +29,7 @@ $(document).ready(function () {
       setTimeout(function() {
         $(".modal-footer").fadeOut();
       }, 2000);
-    });
+    }); 
+    
   });
-  
+   
