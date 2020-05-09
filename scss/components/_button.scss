@@ -2,7 +2,6 @@
     display: inline-block;
     font-weight: 400;
     text-align: center;
-    white-space: nowrap;
     vertical-align: middle;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -14,6 +13,9 @@
     border-radius: $border-radius-sm;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     border: none;
+    &:hover {
+        opacity: 0.9;
+    }
     &.btn-primary {
         color: $color-white;
         background-color: $color-blue;
@@ -37,6 +39,25 @@
             color:$color-white;
         }
     }
+
+    &.btn-gray-dark {
+        background-color: $color-gray-dark;
+        color:$color-white;
+        &:active {
+            background-color: $color-gray;
+            color:$color-white;
+        }
+    }
+
+    &.btn-secondary {
+        background-color: $color-orange;
+        color:$color-white;
+        &:active {
+            background-color: $color-blue;
+            color:$color-white;
+        }
+    }
+
     [type=reset], [type=submit], button, html [type=button] {
         -webkit-appearance: button;
     }

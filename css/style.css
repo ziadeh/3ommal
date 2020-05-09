@@ -1808,7 +1808,6 @@ input[type="date"] {
   display: inline-block;
   font-weight: 400;
   text-align: center;
-  white-space: nowrap;
   vertical-align: middle;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1820,6 +1819,8 @@ input[type="date"] {
   border-radius: 10px;
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
   border: none; }
+  .btn:hover {
+    opacity: 0.9; }
   .btn.btn-primary {
     color: #ffffff;
     background-color: #0C60BA; }
@@ -1834,6 +1835,18 @@ input[type="date"] {
     color: #656565; }
     .btn.btn-gray:active {
       background-color: #8E8E8E;
+      color: #ffffff; }
+  .btn.btn-gray-dark {
+    background-color: #656565;
+    color: #ffffff; }
+    .btn.btn-gray-dark:active {
+      background-color: #8E8E8E;
+      color: #ffffff; }
+  .btn.btn-secondary {
+    background-color: #FFC400;
+    color: #ffffff; }
+    .btn.btn-secondary:active {
+      background-color: #0C60BA;
       color: #ffffff; }
   .btn [type=reset], .btn [type=submit], .btn button, .btn html [type=button] {
     -webkit-appearance: button; }
