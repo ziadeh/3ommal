@@ -223,13 +223,13 @@ input[type="date"] {
   }
   
   .select-items div:hover, .same-as-selected {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: $color-silver;
+    color:$color-white
   }
 
   .select-selected {
     display: block;
     width: 100%;
-    color:$color-gray-dark;
     background-color: $color-white;
     background-clip: padding-box;
     border: none;
@@ -258,3 +258,46 @@ input[type="date"] {
     font-size:80%;
     color:$color-silver;
 }
+
+
+
+
+.upload-btn-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+  
+  .upload-btn-wrapper .btn {
+    display: block;
+    width: 100%;
+    background-color: $color-white;
+    background-clip: padding-box;
+    border: none;
+    border-radius: $border-radius-sm;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    margin-top: .5rem;
+    text-align: center;
+    box-shadow: 2px 2px 12px rgba($color-black, 0.20);
+    line-height: 2.4;
+    font-size:90%;
+    color: $color-silver;
+    height: 40px;
+    padding:0;
+    cursor: pointer;
+  }
+  
+  .upload-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    right:0;
+    width:100%;
+  }
+  .upload-btn-wrapper .icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 4px;
+  }

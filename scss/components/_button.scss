@@ -16,6 +16,9 @@
     &:hover {
         opacity: 0.9;
     }
+    &.btn-md {
+        font-size: 80%;
+    }
     &.btn-primary {
         color: $color-white;
         background-color: $color-blue;
