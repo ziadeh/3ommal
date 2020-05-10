@@ -1,70 +1,125 @@
 .btn {
-    display: inline-block;
-    font-weight: 400;
-    text-align: center;
-    vertical-align: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    padding: .8rem 1rem .5rem 1rem;
-    font-size: 1em;
-    line-height: 1.5;
-    border-radius: $border-radius-sm;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    border: none;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 0.8rem 1rem 0.5rem 1rem;
+  font-size: 1em;
+  line-height: 1.5;
+  border-radius: $border-radius-sm;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  border: none;
+  &:hover {
+    opacity: 0.9;
+  }
+  &.btn-md {
+    font-size: 80%;
+  }
+  &.btn-link {
+    background: none;
+    color: $color-blue;
     &:hover {
-        opacity: 0.9;
+      background-color: $color-gray-lighter;
     }
-    &.btn-md {
-        font-size: 80%;
+    &:active {
+      background-color: $color-blue;
+      color: $color-white;
     }
-    &.btn-primary {
-        color: $color-white;
-        background-color: $color-blue;
-        &:active {
-            background-color: $color-orange;
-        }
+  }
+  &.btn-primary {
+    color: $color-white;
+    background-color: $color-blue;
+    &:active {
+      background-color: $color-orange;
     }
+  }
 
-    &.btn-n-bg {
-        background:transparent;
-        &:active {
-            background-color: $color-gray-lighter;
-        }
+  &.btn-n-bg {
+    background: transparent;
+    &:active {
+      background-color: $color-gray-lighter;
     }
+  }
 
-    &.btn-gray {
-        background-color: $color-gray-lighter;
-        color:$color-gray-dark;
-        &:active {
-            background-color: $color-gray;
-            color:$color-white;
-        }
+  &.btn-gray {
+    background-color: $color-gray-lighter;
+    color: $color-gray-dark;
+    &:active {
+      background-color: $color-gray;
+      color: $color-white;
     }
+  }
 
-    &.btn-gray-dark {
-        background-color: $color-gray-dark;
-        color:$color-white;
-        &:active {
-            background-color: $color-gray;
-            color:$color-white;
-        }
+  &.btn-gray-dark {
+    background-color: $color-gray-dark;
+    color: $color-white;
+    &:active {
+      background-color: $color-gray;
+      color: $color-white;
     }
+  }
 
-    &.btn-secondary {
-        background-color: $color-orange;
-        color:$color-white;
-        &:active {
-            background-color: $color-blue;
-            color:$color-white;
-        }
+  &.btn-secondary {
+    background-color: $color-orange;
+    color: $color-white;
+    &:active {
+      background-color: $color-blue;
+      color: $color-white;
     }
+  }
 
-    [type=reset], [type=submit], button, html [type=button] {
-        -webkit-appearance: button;
+  [type="reset"],
+  [type="submit"],
+  button,
+  html [type="button"] {
+    -webkit-appearance: button;
+  }
+  &.btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+  }
+  &.btn-with-icon {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding: 0;
+    flex-grow: 1;
+    margin: 0 30px 20px 30px;
+    width:20%;
+    input {
+        display: none !important;
     }
-    &.btn:not(:disabled):not(.disabled) {
-        cursor: pointer;
+    .icon-container {
+      background: #ffc400;
+      padding: 10px;
+      border-radius: 50%;
+      margin-right: -25px;
     }
+    .title {
+        width:100%;
+        padding-top: 7px;
+    }
+  }
+}
+.selection {
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 50px;
+}
+@media(max-width: 557px) {
+    .btn.btn-with-icon {
+        width:100%;
+    }
+.selection {
+    &.selection-sm {
+      .btn.btn-with-icon {
+          width: 29%;
+          margin: 17px 17px 0px 17px;
+      }
+    }
+  }
 }

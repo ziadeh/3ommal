@@ -1,0 +1,145 @@
+<html lang="ar">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <title>3ommal Website</title>
+    <meta name="description" content="" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./images/logo/logo-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/logo/logo-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./images/logo/logo-16x16.png"
+    />
+    <link rel="mask-icon" href="./images/logo/mask-icon.svg" color="#0e60ba" />
+    <meta name="theme-color" content="#0e60ba" />
+    <link rel="stylesheet" href="./css/style.css" type="text/css" />
+  </head>
+  <body class="job-application-page">
+    <div class="main">
+      <div class="header">
+        <div class="container">
+          <div class="header-content-right"></div>
+          <div class="header-content-center">
+            قدم طلب عمل
+          </div>
+          <div class="header-content-left">
+            <a href="home.html" class="btn-home"
+              ><i class="icon arrow-left"></i
+            ></a>
+            <a id="previous" href="#"><i class="icon arrow-left"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="page-icon">
+          <span class="icon logo-questions"></span>
+        </div>
+      <form>
+        
+        <div id="wizard">
+          <h5>هل ترغب في الحصول على فرصة عمل؟</h5>
+          <section>
+            <div class="logo"></div>
+            <p class="text-blue text-center m-t-30">
+              هل ترغب في الحصول على فرصة عمل؟
+            </p>
+            <div class="text-center m-t-30 m-b-30">
+              <img src="./images/icons/question.svg" />
+            </div>
+            <div id="job_interview"></div>
+          </section>
+
+
+          <h5>مجالات العمل</h5>
+          <section>
+              <div class="logo"></div>
+              <p class="text-blue text-center m-t-30">
+                مجالات العمل 
+              </p>
+              <div class="selection m-t-100" id="step-work-fields">
+            </div>
+          </section>
+ 
+          <h5>تخصصات عمل البناء</h5>
+          <section>
+            <div class="logo"></div>
+            <p class="text-blue text-center m-t-30">
+              تخصصات عمل البناء 
+            </p>
+            <div class="selection selection-sm m-t-100" id="step-constructions">
+            </div> 
+          </section>
+
+          <h5>ما هو نوع بطاقة الهوية</h5>
+          <section>
+            <div id="id_type"></div> 
+            <div class="question-nav">
+              <a href="#" class="btn btn-primary" onclick="goToPart('nationality', 'id_type')">
+                <span class="icon icon-arrow-next white"> </span>
+                السؤال التالي
+              </a>
+            </div>
+          </section>
+
+          <h5>هل لديك بطاقة ممغنطة</h5>
+          <section>
+            <div id="magnetic_card"></div> 
+            <div class="question-nav">
+              <a href="#" class="btn btn-primary" onclick="goTo('هل عملت سابقاً داخل الخط الأخضر', 'magnetic_card')">
+                <span class="icon icon-arrow-next white"> </span>
+                السؤال التالي
+              </a>
+              <a href="#" class="btn btn-primary"  onclick="goTo('ما هو نوع بطاقة الهوية', 'magnetic_card')">
+                السؤال السابق
+                <span class="icon icon-arrow-prev white"> </span>
+              </a>
+            </div>
+          </section>
+
+          <h5>هل لديك رخصة مركبة</h5>
+          <section>
+            <div id="vehicle_license"></div>
+          </section>
+
+          <h5>هل عملت سابقاً داخل الخط الأخضر</h5>
+          <section>
+            <div id="worked_inside_green_line"></div>
+          </section>
+
+
+          <div class="form-messages">
+            <div class="form-message">
+              يرجى الإجابة عن السؤال قبل الانتقال للسؤال الآخر
+            </div>
+          </div>
+          
+        </div>
+      </form>
+    </div>
+    <div id="templates"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src='https://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.js'></script>
+    <script src="./js/vendors/steps/jquery.steps.min.js"></script>
+    <script src="./js/vendors/select-field.js"></script>
+    <script src="./js/vendors/input-file.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/templates.js"></script>
+    <script src="./js/wizard.js"></script>
+    <script src="./js/job_application.js"></script> 
+  </body>
+</html>

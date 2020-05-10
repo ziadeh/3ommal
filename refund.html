@@ -2,7 +2,10 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
     <title>3ommal Website</title>
     <meta name="description" content="" />
     <link
@@ -32,7 +35,7 @@
         <div class="container">
           <div class="header-content-right"></div>
           <div class="header-content-center">
-            أخبرنا عن إصابة عمل 
+            استرجاع مستحقات نهاية الخدمة
           </div>
           <div class="header-content-left">
             <a href="home.html"><i class="icon arrow-left"></i></a>
@@ -40,19 +43,9 @@
         </div>
       </div>
       <div class="container">
-        <form class="form"> 
+        <form class="form">
           <div class="form-group">
-            <label>تاريخ الإصابة</label>
-            <div class="input-with-icon">
-            <input
-              type="date"
-              class="from-control myDate"
-            />
-            <i class="icon icon-date"></i>
-          </div>
-          </div>
-          <div class="form-group">
-            <label>هل كنت تعمل عند نفس المشغل المذكور بالتصريح؟</label>
+            <label>هل تملك قسيمة راتب (تلوش) لفترة الاسترجاع؟</label>
             <div class="multi-input">
               <div class="ck-button">
                 <label>
@@ -63,6 +56,27 @@
                 <label>
                   <input type="radio" name="q" value="f" /><span>لا</span>
                 </label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>مبلغ قسيمة الراتب (تلوش) خلال فترة العمل </label>
+            <input
+              type="number"
+              class="from-control"
+              placeholder="أدخل المبلغ هنا"
+            />
+          </div>
+          <div class="form-group">
+            <label>سنوات العمل لفترة الاسترجاع</label>
+            <div class="multi-input">
+              <div class="label-between">من</div>
+              <div class="input-with-icon">
+                <input type="date" class="from-control myDate text-right" />
+              </div>
+              <div class="label-between">إلى</div>
+              <div class="input-with-icon">
+                <input type="date" class="from-control myDate text-right" />
               </div>
             </div>
           </div>
@@ -81,17 +95,23 @@
               </div>
             </div>
           </div>
-           
+
           <div class="form-group">
             <label>إرفاق قسيمة الراتب </label>
             <div class="upload-btn-wrapper">
-              <label class="btn"><i class="icon icon-upload"></i> اضغط لإرفاق الصورة</label>
+              <label class="btn"
+                ><i class="icon icon-upload"></i> اضغط لإرفاق الصورة</label
+              >
               <input type="file" name="myfile" />
-            </div> 
-          </div> 
+            </div>
+          </div>
 
           <div class="form-footer text-center m-b-50">
-            <a class="btn btn-primary w-50-perc m-t-20 btn-md modal-view" href="#" >حفظ البيانات</a>
+            <a
+              class="btn btn-primary w-50-perc m-t-20 btn-md modal-view"
+              href="#"
+              >حفظ البيانات</a
+            >
 
             <div class="form-messages">
               <div class="form-message">
@@ -103,12 +123,10 @@
       </div>
     </div>
 
-
-
     <div class="modal fade" tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <div class="box-container"> 
+          <div class="box-container">
             <div class="box-content text-center">
               <p class="text-gray-dark m-t-b-20">شكراً لك</p>
               <p class="text-silver text-lighter">
@@ -123,7 +141,6 @@
       </div>
       <div class="modal-backdrop"></div>
     </div>
-
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="./js/vendors/select-field.js"></script>

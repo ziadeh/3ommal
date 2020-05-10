@@ -1,11 +1,64 @@
 .box-container {
     width: 90%;
     background-color:$color-white;
-    min-height: 169px;
+    // min-height: 149px;
     border-radius: $border-radius-lg;
     display: block;
     margin: 0 auto; 
     .box-content {
         padding: 15px; 
+    }
+    &.box-inline {
+        box-shadow: 2px 2px 12px rgba($color-black, 0.20);
+    }
+    .box-confirm {
+        display: flex;
+        justify-content: space-around;
+        align-items: self-end;
+        flex: 1 100%;
+        text-align: center;
+        flex-direction: row;
+        border-top:solid 1px $color-gray-lighter;
+        margin-top:10px;
+        height: 42px;
+        a {
+            display: block;
+            width: 100%;
+            border-radius: 0;
+            &:first-child {
+                border-bottom-right-radius: $border-radius-lg;
+                border-left: solid 1px $color-gray-lighter;
+            }
+            &:last-child {
+                border-bottom-left-radius: $border-radius-lg;
+            }
+        }
+        .ck-button {
+            margin:0;
+            box-shadow: none;
+            border-radius: 0;
+            &:first-child {
+                border-bottom-right-radius: $border-radius-lg;
+                border-left: solid 1px $color-gray-lighter;
+                label span {
+                    border-radius: 0 0 $border-radius-lg 0;
+                }
+            }
+            &:last-child {
+                border-bottom-left-radius: $border-radius-lg;
+                label span {
+                    border-radius: 0 0 0 $border-radius-lg;
+                }
+            } 
+            label span {
+                height: 100%;
+            }   
+            input:checked + span {
+            }
+            label {
+                margin: 0;
+                width: 100%;
+            }
+        }
     }
 }

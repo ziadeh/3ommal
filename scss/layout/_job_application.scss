@@ -1,0 +1,58 @@
+.job-application-page {
+    background-color: $color-gray-lighter;
+}
+#previous {
+    display: none;
+}
+
+.wizard {
+    .content { 
+        background-color: transparent;
+    }
+    h5 {
+        display:none;
+    }
+    .form-messages {
+        position: fixed;
+        bottom: 79px;
+        display: none;
+        width: 290px;
+        right: 50%;
+        margin-right: -145px;
+    }
+}
+ul[role="tablist"] {
+    display: none;
+}
+.wizard > .content > .body {
+    overflow-x: scroll;
+    height: 100%;
+}
+.page-icon {
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 20px;
+    display: none;
+    margin: 70px auto;
+    text-align: center;
+}
+.question-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 80px 10px;
+    .btn {
+        font-size: 80%;
+        padding: 7px 8px 3px 8px;
+        border-radius: 6px;
+        width: 37%;
+        &:first-child {
+            margin-left: 5px;
+        }
+        &:last-child {
+            margin-right: 5px;
+        }
+    }
+
+}

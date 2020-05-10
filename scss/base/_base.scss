@@ -30,7 +30,7 @@ body {
 
 .text-center { text-align: center;}
 .text-left { text-align: left;}
-.text-right { text-align: right;}
+.text-right { text-align: right !important;}
 
 .text-lighter { font-weight: lighter;}
 
@@ -106,3 +106,6 @@ input, button {
         font-size:1.3em;
     }
 }
+
+input[type="date"]::-webkit-inner-spin-button,    
+input[type="date"]::-webkit-clear-button { display: none; }

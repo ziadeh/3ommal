@@ -63,6 +63,27 @@
         display: inline-block;
         padding:20px;
     }
+    .modal-confirm {
+        display: flex;
+        justify-content: space-around;
+        align-items: self-end;
+        flex: 1 100%;
+        text-align: center;
+        flex-direction: row;
+        border-top:solid 1px $color-gray-lighter;
+        margin-top:10px;
+        a {
+            display: block;
+            width: 100%;
+            border-radius: 0;
+            &:first-child {
+                border-bottom-right-radius: $border-radius-lg;
+            }
+            &:last-child {
+                border-bottom-left-radius: $border-radius-lg;
+            }
+        }
+    }
 }
 .modal-open {
     .modal {
