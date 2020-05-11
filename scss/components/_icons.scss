@@ -157,6 +157,24 @@
         background-position: -287px -151px;
         background-size: 680px;
     }
+    &.icon-plus-blue {
+        width: 22px;
+        height: 22px;
+        background-position: -795px -103px;
+        background-size: 460px;
+    }
+    &.icon-camera {
+        width: 22px;
+        height: 19px;
+        background-position: -914px -114px;
+        background-size: 500px;
+    }
+    &.icon-send-message {
+        width: 22px;
+        height: 21px;
+        background-position: -963px -113px;
+        background-size: 500px;
+    }
     &.logo-questions {
         width: 54px;
         height: 78px;
@@ -181,5 +199,10 @@
         transform: rotateX(180deg);
         -webkit-transform: rotateY(180deg);
     }
-    
+    &.icon-phone {
+        background-size: 650px;
+        background-position: -17px -206px;
+        width: 34px;
+        height: 41px;
+    }
 }

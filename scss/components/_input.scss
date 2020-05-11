@@ -60,7 +60,7 @@ $in-w: $n-char*($char-w + $gap);
         display: block;
     }
 }
-.from-control {
+.form-control {
     display: block;
     width: 100%;
     color:$color-gray-dark;
@@ -84,6 +84,13 @@ $in-w: $n-char*($char-w + $gap);
         border-color: #80bdff;
         outline: 0;
         box-shadow: 2px 2px 12px rgba($color-blue, 0.40);
+    }
+    &.form-inline {
+      box-shadow: none;
+      margin: 0;
+      text-align: right;
+      line-height: 74em;
+      border-radius: 50px;
     }
 }
 

@@ -27,13 +27,14 @@
         }
     }
 }
-#previous {
+#previous,
+#wizard {
     display: none;
 }
-
 .wizard {
     .content { 
         background-color: transparent;
+        min-height: 50%;
     }
     h5 {
         display:none;
@@ -50,10 +51,7 @@
 ul[role="tablist"] {
     display: none;
 }
-.wizard > .content > .body {
-    overflow-x: scroll;
-    height: 100%;
-}
+
 .page-icon {
     background-repeat: no-repeat;
     background-position: center;
