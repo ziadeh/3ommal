@@ -20,6 +20,13 @@
   &.btn-md {
     font-size: 80%;
   }
+  &.btn-lg {
+    font-size: 120%;
+  }
+  &.btn-wide {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
   &.btn-link {
     background: none;
     color: $color-blue;

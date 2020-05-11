@@ -66,6 +66,10 @@ body {
 
 .w-50-perc { width:50% }
 
+.r-50 {
+    border-radius: 50px !important;
+}
+
 ::-webkit-input-placeholder {
     color: $color-gray-lighter;
   }
@@ -87,6 +91,7 @@ b {
 a {
     display: inline-block;
     text-decoration: none;
+    color:$color-blue;
 }
 input, button {
     height: 35px;
