@@ -15,7 +15,7 @@
       left: 0;
       right: auto;
       bottom: 0px;
-      background-image: url(/images/icons/requests-right.svg);
+      background-image: url($icons + 'requests-right.svg');
       width: 183px;
       height: 112px;
       background-position: 0 0;  
@@ -23,7 +23,7 @@
   .home-menu {
     padding-top: 60px;
     .home-menu-container:after {
-      background-image: url(/images/icons/requests-left.svg) !important;
+      background-image: url($icons + 'requests-left.svg') !important;
       content: "";
       height: 120%;
       width: 80px;
@@ -178,7 +178,6 @@
   font-weight: bold;
 }
 
-/* Burger Style: @see: https://codepen.io/CreativeJuiz/full/oMZNXy */
 .open-main-nav {
   position: absolute;
   top: 15px;
