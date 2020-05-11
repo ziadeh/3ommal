@@ -249,7 +249,7 @@ function submitForm() {
 function closeModal() {
   $(".modal").toggleClass("show");
   setTimeout(() => {
-    window.location = '/home.html';
+    window.location = '/3ommal/home.html';
   }, 1000);
 }
 
@@ -283,7 +283,7 @@ $(document).ready(function () {
     setTimeout(() => {
       answer === yes
         ? $("#wizard-t-1").get(0).click()
-        : (window.location = "/home.html");
+        : (window.location = "/3ommal/home.html");
     }, 250);
   });
 
