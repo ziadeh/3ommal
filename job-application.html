@@ -65,71 +65,15 @@
           </section>
 
 
-          <h5>مجالات العمل</h5>
-          <section>
-              <div class="logo"></div>
-              <p class="text-blue text-center m-t-30">
-                مجالات العمل 
-              </p>
-              <div class="selection m-t-100" id="step-work-fields">
-            </div>
-          </section>
- 
-          <h5>تخصصات عمل البناء</h5>
-          <section>
-            <div class="logo"></div>
-            <p class="text-blue text-center m-t-30">
-              تخصصات عمل البناء 
-            </p>
-            <div class="selection selection-sm m-t-100" id="step-constructions">
-            </div> 
-          </section>
-
-          <h5>ما هو نوع بطاقة الهوية</h5>
-          <section>
-            <div id="id_type"></div> 
-            <div class="question-nav">
-              <a href="#" class="btn btn-primary" onclick="goToPart('nationality', 'id_type')">
-                <span class="icon icon-arrow-next white"> </span>
-                السؤال التالي
-              </a>
-            </div>
-          </section>
-
-          <h5>هل لديك بطاقة ممغنطة</h5>
-          <section>
-            <div id="magnetic_card"></div> 
-            <div class="question-nav">
-              <a href="#" class="btn btn-primary" onclick="goTo('هل عملت سابقاً داخل الخط الأخضر', 'magnetic_card')">
-                <span class="icon icon-arrow-next white"> </span>
-                السؤال التالي
-              </a>
-              <a href="#" class="btn btn-primary"  onclick="goTo('ما هو نوع بطاقة الهوية', 'magnetic_card')">
-                السؤال السابق
-                <span class="icon icon-arrow-prev white"> </span>
-              </a>
-            </div>
-          </section>
-
-          <h5>هل لديك رخصة مركبة</h5>
-          <section>
-            <div id="vehicle_license"></div>
-          </section>
-
-          <h5>هل عملت سابقاً داخل الخط الأخضر</h5>
-          <section>
-            <div id="worked_inside_green_line"></div>
-          </section>
-
-
           <div class="form-messages">
             <div class="form-message">
               يرجى الإجابة عن السؤال قبل الانتقال للسؤال الآخر
             </div>
           </div>
-          
         </div>
+       </div>
       </form>
+      <div id="modal"></div>
     </div>
     <div id="templates"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -140,6 +84,7 @@
     <script src="./js/modal.js"></script>
     <script src="./js/templates.js"></script>
     <script src="./js/wizard.js"></script>
-    <script src="./js/job_application.js"></script> 
+    <script src="./js/categories-data.js"></script> 
+    <script src="./js/job_application_min.js"></script> 
   </body>
 </html>

@@ -1,6 +1,7 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+/*
+* 3ommal Web Application
+* SCSS Styles / Application Theme
+* author Ziad Ziadeh <ziadeh50@gmail.com>
 */
 @import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Droid+Sans+Mono");
@@ -226,9 +227,13 @@ input, button {
 @media (min-width: 997px) {
   body {
     font-size: 1.3em; } }
+input[type="month"]::-webkit-inner-spin-button,
+input[type="month"]::-webkit-clear-button,
 input[type="date"]::-webkit-inner-spin-button,
 input[type="date"]::-webkit-clear-button {
-  display: none; }
+  -webkit-appearance: none;
+  display: none;
+  opacity: 0; }
 
 .logo {
   width: 129px;
@@ -1863,6 +1868,11 @@ ol.bjqs-markers {
     height: 37px;
     background-position: -84px -81px;
     background-size: 680px; }
+    .icon.icon-constructions.icon-lg {
+      width: 105;
+      height: 105;
+      background-position: -226px -220px;
+      background-size: 1850px; }
   .icon.icon-cultivation {
     width: 37px;
     height: 37px;
@@ -2288,7 +2298,7 @@ input[type="date"] {
       padding: 10px;
       border-radius: 50%;
       margin-right: -25px; }
-    .btn.btn-with-icon .title {
+    .btn.btn-with-icon .category-title {
       width: 100%;
       padding-top: 7px; }
 
@@ -2376,6 +2386,44 @@ input[type="date"] {
       .box-container .box-confirm .ck-button label {
         margin: 0;
         width: 100%; }
+    .box-container .box-confirm .input-with-icon input[type="month"],
+    .box-container .box-confirm .input-with-icon input[type="date"] {
+      border-radius: 0 0 21px 21px;
+      border: none;
+      box-shadow: none;
+      margin: 0;
+      height: 42px; }
+    .box-container .box-confirm select {
+      font-family: 'Tajawal', sans-serif;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      /* Remove default arrow */
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      border: none;
+      text-align-last: center;
+      margin-right: 10px;
+      border-radius: 0;
+      color: #656565;
+      font-size: 1em;
+      background: none; }
+      .box-container .box-confirm select:first-child {
+        border-left: solid 1px #E1E1E1;
+        border-bottom-right-radius: 20px; }
+      .box-container .box-confirm select:last-child {
+        border-bottom-left-radius: 20px; }
+    .box-container .box-confirm select::-ms-expand {
+      display: none; }
+    .box-container .box-confirm input[type="number"],
+    .box-container .box-confirm input[type="text"] {
+      margin: 0;
+      border-radius: 0;
+      box-shadow: none;
+      border: none;
+      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 20px; }
 
 .fade {
   transition: opacity .15s linear; }
@@ -2611,7 +2659,29 @@ input[type="date"] {
   background-color: #FFC400; }
 
 .job-application-page {
-  background-color: #E1E1E1; }
+  background-color: rgba(225, 225, 225, 0.39); }
+  .job-application-page .container:before {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-image: url("/3ommal/images/icons/requests-right.svg");
+    background-repeat: no-repeat;
+    background-position: 17px 80px;
+    z-index: -1; }
+  .job-application-page .container:after {
+    content: "";
+    position: absolute;
+    width: 53px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url("/3ommal/images/icons/requests-left.svg");
+    background-repeat: no-repeat;
+    background-position: 0 130px;
+    z-index: -1; }
 
 #previous {
   display: none; }
@@ -2658,5 +2728,11 @@ ul[role="tablist"] {
       margin-left: 5px; }
     .question-nav .btn:last-child {
       margin-right: 5px; }
+
+.category-section-icon {
+  display: block;
+  text-align: center;
+  width: 100%;
+  margin: 10px 0; }
 
 /*# sourceMappingURL=style.css.map */

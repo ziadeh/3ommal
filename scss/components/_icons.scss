@@ -72,6 +72,12 @@
         height: 37px;
         background-position: -84px -81px;
         background-size: 680px;
+        &.icon-lg {
+            width: 105;
+            height: 105;
+            background-position: -226px -220px;
+            background-size: 1850px;
+        }
     }
     &.icon-cultivation {
         width: 37px;
