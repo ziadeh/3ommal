@@ -49,6 +49,13 @@
         background-position: -1289px 6px;
         background-size: 340px;
     }
+    &.arrow-right {
+        width: 45px;
+        height: 47px;
+        background-position: -1289px 6px;
+        background-size: 340px;
+        transform: rotate(180deg);
+    }
     &.request {
         width: 45px;
         height: 47px;
@@ -210,5 +217,62 @@
         background-position: -106px -275px;
         width: 61px;
         height: 79px;
+        &.down-app-primary {
+            background-position: -646px -275px; 
+        }
+    }
+    &.icon-fb {
+        background-image: url($icons + 'fb.svg');
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        background-size: 20px;
+        background-position: 0 0;
+    }
+    &.icon-tw {
+        background-image: url($icons + 'tw.svg');
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        background-size: 20px;
+        background-position: 0 0;
+    }
+    &.icon-instagram {
+        background-image: url($icons + 'instagram.svg');
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        background-size: 20px;
+        background-position: 0 0;
+    }
+    &.icon-user {
+        width: 23px;
+        height: 21px;
+        background-position: -1112px -163px;
+        background-size: 500px;
+    }
+    &.icon-info {
+        width: 23px;
+        height: 21px;
+        background-position: -1162px -163px;
+        background-size: 500px;
+    }
+    &.icon-privacy {
+        width: 23px;
+        height: 21px;
+        background-position: -1212px -163px;
+        background-size: 500px;
+    }
+    &.icon-about {
+        width: 23px;
+        height: 21px;
+        background-position: -1262px -163px;
+        background-size: 500px;
+    }
+    &.icon-contactus {
+        width: 23px;
+        height: 21px;
+        background-position: -1315px -161px;
+        background-size: 500px;
     }
 }

@@ -27,7 +27,7 @@ $("#wizard").steps({
         updatePageHeight(currentIndex);
         setTimeout(() => {
             $("#wizard").show();
-        },40);
+        },100);
     },
     onStepChanged: function (event, currentIndex, priorIndex) { 
         updatePageHeight(currentIndex);
@@ -38,9 +38,9 @@ function updatePageHeight(currentIndex) {
     setTimeout(() => {
         let nextPageHeight = $("#wizard-p-"+ currentIndex).find("div").first().innerHeight();
         $("#wizard .content.clearfix").height(nextPageHeight+100);
-        console.log(currentIndex, nextPageHeight);
-    },50);
+    },150);
 }
+
 $("a[href=#]").click(function (e) {
     e.preventDefault(); 
 });

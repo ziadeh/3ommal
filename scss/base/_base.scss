@@ -69,6 +69,12 @@ body {
 .r-50 {
     border-radius: 50px !important;
 }
+.w-50 {
+    width: 50% !important;
+}
+.w-100 {
+    width: 100% !important;
+}
 
 ::-webkit-input-placeholder {
     color: $color-gray-lighter;
@@ -92,6 +98,29 @@ a {
     display: inline-block;
     text-decoration: none;
     color:$color-blue;
+}
+textarea {
+    padding:12px;
+    width:100%;
+    border:solid 1px $color-gray-light;
+    box-shadow: none;
+    font-family: inherit;
+    font-size: 80%;
+    color: inherit;
+
+    overflow: auto;
+    outline: none;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+
+    &:focus {
+        border-color:$color-blue;
+    }
+}
+small {
+    font-size: 80%;
 }
 input, button {
     height: 35px;

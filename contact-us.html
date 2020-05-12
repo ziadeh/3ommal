@@ -1,0 +1,112 @@
+<html lang="ar">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <title>3ommal Website</title>
+    <meta name="description" content="" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./images/logo/logo-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/logo/logo-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./images/logo/logo-16x16.png"
+    />
+    <link rel="mask-icon" href="./images/logo/mask-icon.svg" color="#0e60ba" />
+    <meta name="theme-color" content="#0e60ba" />
+    <link rel="stylesheet" href="./css/style.css" type="text/css" />
+  </head>
+  <body class="public">
+
+    <div class="site-header">
+      <div class="container">
+        <div class="options">
+          <a class="option" href="#">
+            الرئيسية
+          </a>
+          <a class="option" href="#">
+            الصفحة الشخصية
+          </a>
+          <a class="option" href="#">
+            الخدمات
+          </a>
+          <a class="option" href="#">
+            عن عمال
+          </a>
+          <a class="option" href="#">
+            اتصل بنا
+          </a>
+          <a class="btn btn-banner" href="#">
+            تسجيل الخروج
+          </a>
+        </div>
+        <div class="containermenu">
+          <a href="/public.html" class="open-main-nav is-open">
+            <span class="burger"></span>
+          </a>
+        </div>
+        <a class="logo-container">
+          <div class="logo"></div>
+          <span class="site-name">عـمـال</span>
+        </a>
+      </div>
+    </div>
+    <div id="mobile-menu" class="mobile-menu is-open">
+      <div class="inner-page">
+        <div class="inner-menu">
+          <ul>
+            <li><a href="#">الرئيسية</a></li>
+            <li>-</li>
+            <li><a href="#">اتصل بنا</a></li>
+          </ul>
+        </div>
+        <div class="inner-content">
+          <h1>اتصل بنا</h1>
+          <p class="text-silver">هل تملك مشكلة ؟ تواصل معنا</p>
+          <div class="contact-form">
+            <form>
+              <div class="text-left text-blue"><small>200</small></div>
+              <textarea rows="9" class="" placeholder="أكتب هنا"></textarea>
+            </textarea>
+          </form>
+          <div class="success-message">
+            <h2 class="m-b-20">شكراً لك</h2>
+            <p>لقد تم إرسال الرسالة
+              سوف نقوم بالرد على استفساراتكم
+              خلال فترة قصيرة</p>
+          </div>
+        </div>
+          <div class="submit-form">
+            <a href="#" class="btn btn-primary m-t-40 btn-wide r-50">إرسال</a>
+          </div>
+          <p class="text-center m-t-50">يمكنك التواصل معنا بشكل فوري
+            على رقم : 0599123456
+            </p>
+      </div>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+       //----Testing 
+    $(".submit-form a").click(() => {
+      $(".submit-form a").addClass('disabled');
+      $("form").fadeOut(200, () => {
+        $(".success-message").fadeIn();
+      })
+    })
+    </script>
+  </body>
+</html>

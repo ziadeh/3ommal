@@ -39,7 +39,10 @@ let doYouhaveMagneticCard = "هل لديك بطاقة ممغنطة",
 let yearName = "السنة",
   monthName = "الشهر",
   yes = "نعم",
-  no = "لا";
+  no = "لا",
+  yearsOfExperiencePlaceholder = 'أدخل هنا عدد سنوات الخبرة',
+  selectLevelPlaceholder = 'اختر المستوى'
+  amountOfTheMonthlySalaryPlaceholder = 'أدخل المبلغ هنا';
 
 //##############################################################################################################################
 //###################################################---Global Variables---#####################################################
@@ -62,7 +65,14 @@ let question_id = "#question-",
     "دبلوم",
     "بكالوريوس",
     "ماجستير",
-  ];
+  ],
+  //#########---Popup message---############
+ modal = {
+    title: 'شكراً لك',
+    message: 'لقد تلقينا طلبك. سوف يتم الرد عليك قريبًا',
+    button: 'حسناً',
+    action: 'onclick=closeModal()'
+};
 
 for (i = currentYear; i >= 1990; i--) {
   listYear.push(i);
@@ -184,7 +194,7 @@ function goToPart(part, validate) {
         return;
       }
       if (selectedValue === yes) {
-        toSection = dateOfYourLastWorkPermit;
+        toSection = wereYouGettingASalarySlip;
         goTo(toSection, validate);
       } else {
         nationality === palestinian
@@ -236,12 +246,7 @@ function submitForm() {
   console.log($("form").serializeArray());
 
 
-  let modal = {
-    title: 'شكراً لك',
-    message: 'لقد تلقينا طلبك. سوف يتم الرد عليك قريبًا',
-    button: 'حسناً',
-    action: 'onclick=closeModal()'
-  }
+
   $.tmpl("modal-button", modal).appendTo("#modal");
   $(".modal").toggleClass("show");
 }
@@ -392,7 +397,7 @@ $(document).ready(function () {
       template: "question-input",
       values: {
         name: "amount_of_the_monthly_salary",
-        placeholder: "أدخل المبلغ هنا",
+        placeholder: amountOfTheMonthlySalaryPlaceholder,
       },
       nav: {
         action: "goTo",
@@ -452,7 +457,7 @@ $(document).ready(function () {
       template: "question-input",
       values: {
         name: "monthly_salary_amount_you_were_getting",
-        placeholder: "أدخل المبلغ هنا",
+        placeholder: amountOfTheMonthlySalaryPlaceholder,
       },
       nav: {
         action: "goTo",
@@ -497,7 +502,7 @@ $(document).ready(function () {
       template: "question-input",
       values: {
         name: "years_of_experience",
-        placeholder: "أدخل هنا عدد سنوات الخبرة",
+        placeholder: yearsOfExperiencePlaceholder,
       },
       nav: {
         action: "goTo",
@@ -513,7 +518,7 @@ $(document).ready(function () {
       values: {
         list: levelOfAcademicList,
         name: "level_of_your_academic",
-        placeholder: "اختر المستوى",
+        placeholder: selectLevelPlaceholder,
       },
       nav: {
         last: true,
