@@ -8,10 +8,14 @@
         flex-direction: column;
         align-items: center;
 
+        &:before,
+        &:after {
+            background-repeat: no-repeat !important;
+        } 
         &:before {
             background: url($icons + "home_bg_right.svg");
             content: "";
-            height: 120%;
+            height: 495px;
             width: 180px;
             position: absolute;
             right: 0;
@@ -21,15 +25,15 @@
             background-position: 0 0px;
         }
         &:after { 
-            background: url($icons + "home_bg_left.svg");
+            background: url($icons + "requests-left.svg");
             content: "";
-            height: 120%;
+            height: 495px;
             width: 80px;
             position: absolute;
             left: 0;
-            background-size: 84px;
+            background-size: 34px;
             z-index: -1;
-            top: -50px;
+            top: 0px;
         }
 
         .home-menu-content {

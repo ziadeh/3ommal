@@ -88,9 +88,9 @@ $in-w: $n-char*($char-w + $gap);
     &.form-inline {
       box-shadow: none;
       margin: 0;
-      text-align: right;
-      line-height: 74em;
+      text-align: right; 
       border-radius: 50px;
+      padding: 5px 15px;
     }
 }
 

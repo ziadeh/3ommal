@@ -296,10 +296,13 @@ h1.heading {
   }
 }
 @media (min-width: 992px) {
+  .containermenu {
+    display:none !important;
+  }
   .public .site.container {
     max-width: 960px;
   }
-  .logo {
+  .site-header .logo {
     background-image: url($images + "logo/logo-white.svg");
     background-color: transparent;
   }

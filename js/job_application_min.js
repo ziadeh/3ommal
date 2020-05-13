@@ -573,5 +573,5 @@ $(document).ready(function () {
   });
 
   $(".steps li").removeClass("disabled");
-
+  
 });
