@@ -145,7 +145,9 @@ function goToPart(part, validate) {
         return;
       }
       if (selectedValue === yes) {
-        toSection = wereYouGettingASalarySlip;
+        nationality === palestinian
+          ? (toSection = dateOfYourLastWorkPermit)
+          : (toSection = wereYouGettingASalarySlip);
         goTo(toSection, validate);
       } else {
         nationality === palestinian
@@ -214,7 +216,7 @@ function questionValidation(questionId) {
         }
         break;
     }
-    if(!valid) return false;
+    if (!valid) return false;
   });
 
   return valid;
@@ -228,7 +230,6 @@ function showMessage() {
 }
 
 function submitForm(questionId) {
-  
   if (!questionId) return;
   canPass = questionValidation(questionId);
   if (!canPass) {
@@ -236,13 +237,10 @@ function submitForm(questionId) {
     return;
   }
 
-  
   console.log($("form").serializeArray());
-
 
   $.tmpl("modal-button", modal).appendTo("#modal");
   $(".modal").toggleClass("show");
-
 }
 
 function closeModal() {
