@@ -148,13 +148,12 @@ function goToPart(part, validate) {
         nationality === palestinian
           ? (toSection = dateOfYourLastWorkPermit)
           : (toSection = wereYouGettingASalarySlip);
-        goTo(toSection, validate);
       } else {
         nationality === palestinian
           ? (toSection = doYouHavesecurityBanToEnterIsrael)
           : (toSection = amountOfTheMonthlySalary);
-        goTo(toSection, validate);
       }
+      goTo(toSection, validate);
       break;
 
     case "afterDateOfLastWorkPermit":
