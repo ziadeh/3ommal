@@ -40,9 +40,9 @@ let yearName = "السنة",
   monthName = "الشهر",
   yes = "نعم",
   no = "لا",
-  yearsOfExperiencePlaceholder = 'أدخل هنا عدد سنوات الخبرة',
-  selectLevelPlaceholder = 'اختر المستوى'
-  amountOfTheMonthlySalaryPlaceholder = 'أدخل المبلغ هنا';
+  yearsOfExperiencePlaceholder = "أدخل هنا عدد سنوات الخبرة",
+  selectLevelPlaceholder = "اختر المستوى";
+amountOfTheMonthlySalaryPlaceholder = "أدخل المبلغ هنا";
 
 //##############################################################################################################################
 //###################################################---Global Variables---#####################################################
@@ -67,16 +67,17 @@ let question_id = "#question-",
     "ماجستير",
   ],
   //#########---Popup message---############
- modal = {
-    title: 'شكراً لك',
-    message: 'لقد تلقينا طلبك. سوف يتم الرد عليك قريبًا',
-    button: 'حسناً',
-    action: 'onclick=closeModal()'
-};
+  modal = {
+    title: "شكراً لك",
+    message: "لقد تلقينا طلبك. سوف يتم الرد عليك قريبًا",
+    button: "حسناً",
+    action: "onclick=closeModal()",
+  };
 
-for (i = currentYear; i >= 1990; i--) {
-  listYear.push(i);
+for (i = 1990; i <= currentYear; i++) {
+  listYear.unshift(i);
 }
+
 for (i = 1; i <= 12; i++) {
   listMonth.push(i);
 }
@@ -85,7 +86,7 @@ for (i = 1; i <= 12; i++) {
 //###############################################---Handle Next Question---#####################################################
 //##############################################################################################################################
 
-function goTo(toQuestion, validate) {
+function goTo(toQuestion, questionId) {
   if (!toQuestion) return;
   if (toQuestion === whatIsIdType) {
     $(".page-icon").show();
@@ -94,67 +95,17 @@ function goTo(toQuestion, validate) {
     let title = $(this).text();
     let id = $(this).find("a").attr("id");
     title = title.replace("current step: ", "");
-    let totalSelect = 0,
-      totalInput = 0;
+    let canPass = true;
+
     if (title === toQuestion) {
-      if (validate) {
-        let inputType = undefined;
-
-        $("#" + validate + " input").each((e) => {
-          if (e !== 0) return;
-          inputType = $("#" + validate + " input").eq(e)[0].type;
-        });
-
-        totalSelect = $("#" + validate + " select").length;
-        if (totalSelect > 0) {
-          inputType = "select";
-        }
-
-        totalInput = $("#" + validate + " input[type='text']").length;
-        if (totalInput > 0) {
-          inputType = "input";
-        }
-
-        totalInput = $("#" + validate + " input[type='number']").length;
-        if (totalInput > 0) {
-          inputType = "input";
-        }
-
-        let canPass = true;
-        switch (inputType) {
-          case "radio":
-            if ($("#" + validate + ":not(:has(:radio:checked))").length) {
-              showMessage();
-              return;
-            }
-            break;
-          case "select":
-            $("#" + validate + " select").each((e) => {
-              let getVal = $("#" + validate + " select")
-                .eq(e)
-                .children("option:selected")
-                .val();
-              if (!getVal) {
-                canPass = false;
-              }
-            });
-            if (!canPass) {
-              showMessage();
-              return;
-            }
-            break;
-          case "input":
-            let getVal = $("#" + validate + " input").val();
-            if (!getVal) {
-              canPass = false;
-            }
-            if (!canPass) {
-              showMessage();
-              return;
-            }
-            break;
+      if (questionId) {
+        canPass = questionValidation(questionId);
+        if (!canPass) {
+          showMessage();
+          return;
         }
       }
+
       prevPage = $("#wizard").steps("getCurrentStep").title;
       pageFlow.push(prevPage);
       $("#" + id)
@@ -218,10 +169,6 @@ function goToPart(part, validate) {
   }
 }
 
-function getSelectedValue(id) {
-  return $("#" + id + " input:checked").val();
-}
-
 function setSelection(name, value) {
   if (!value) {
     $(name).find("input").attr("checked", "checked");
@@ -233,6 +180,46 @@ function setSelection(name, value) {
   }
 }
 
+function getSelectedValue(id) {
+  return $("#" + id + " input:checked").val();
+}
+
+function questionValidation(questionId) {
+  let valid = true,
+    getVal = undefined,
+    inputType = undefined;
+
+  $(`#${questionId} :input`).each((idx, e) => {
+    inputType = $(`#${questionId} :input`).eq(idx)[0].type;
+
+    switch (inputType) {
+      case "radio":
+        if ($(`#${questionId}:not(:has(:radio:checked))`).length) {
+          valid = false;
+        }
+        break;
+      case "select-one":
+        $(`#${questionId} select`)
+          .children("option:selected")
+          .each((idx, e) => {
+            if (!e.value) valid = false;
+          });
+        break;
+      case "input":
+      case "number":
+      case "text":
+        getVal = $(`#${questionId} input`).val();
+        if (!getVal) {
+          valid = false;
+        }
+        break;
+    }
+    if(!valid) return false;
+  });
+
+  return valid;
+}
+
 function showMessage() {
   $(".form-messages").fadeIn();
   setTimeout(() => {
@@ -240,24 +227,30 @@ function showMessage() {
   }, 2000);
 }
 
-function submitForm() {
+function submitForm(questionId) {
   
+  if (!questionId) return;
+  canPass = questionValidation(questionId);
+  if (!canPass) {
+    showMessage();
+    return;
+  }
+
   
   console.log($("form").serializeArray());
 
 
-
   $.tmpl("modal-button", modal).appendTo("#modal");
   $(".modal").toggleClass("show");
+
 }
 
 function closeModal() {
   $(".modal").toggleClass("show");
   setTimeout(() => {
-    window.location = '/3ommal/home.html';
+    window.location = "/3ommal/home.html";
   }, 1000);
 }
-
 
 //##############################################################################################################################
 //##############################################################################################################################
@@ -304,13 +297,13 @@ $(document).ready(function () {
       template: "questionYesNo",
       values: {
         firstVal: palestinian,
-        secondVal: israeli
+        secondVal: israeli,
       },
       nav: {
         action: "goToPart",
         action_prop: "nationality",
         validate: "id_type",
-        first: true
+        first: true,
       },
     },
     //##############################################################################################################################
@@ -523,7 +516,7 @@ $(document).ready(function () {
       nav: {
         last: true,
         action: "submitForm",
-        action_prop: '',
+        action_prop: "level_of_your_academic",
       },
     },
   ];
@@ -533,22 +526,20 @@ $(document).ready(function () {
   //###################################################---Build Categories---#####################################################
   //##############################################################################################################################
 
-
   wizardLength = $(".steps ul li").length;
-  
+
   $.each(categories, (idx, ele) => {
     $("#wizard").steps("insert", wizardLength, {
       title: ele.title,
-      content:
-        "<div id='" + ele.id + "'></div>",
+      content: "<div id='" + ele.id + "'></div>",
     });
     let template = {
       title: ele.title,
       icon: ele.icon,
-      id: ele.id
-    }
+      id: ele.id,
+    };
     $.tmpl("category-section", template).appendTo("#" + ele.id);
-    $.tmpl("link-icon", ele.data).appendTo("#cat-"+ ele.id);
+    $.tmpl("link-icon", ele.data).appendTo("#cat-" + ele.id);
 
     wizardLength++;
   });
@@ -557,21 +548,23 @@ $(document).ready(function () {
   //######################################################---Build Questions---###################################################
   //##############################################################################################################################
 
-//  wizardLength = $(".steps ul li").length;
+  //  wizardLength = $(".steps ul li").length;
   $.each(listOfQuestions, (idx, ele) => {
     $("#wizard").steps("insert", wizardLength, {
       title: ele.question,
       content:
         "<div id='" + ele.id + "'></div><div id='nav_" + ele.id + "'></div>",
     });
-    ele.nav.first ? '' : ele.nav.first = false;
-    ele.nav.last ? '' : ele.nav.last = false;
+    ele.nav.first ? "" : (ele.nav.first = false);
+    ele.nav.last ? "" : (ele.nav.last = false);
     $.tmpl(ele.template, ele).appendTo("#" + ele.id);
-    $.tmpl(ele.nav.template ? ele.nav.template : "question-nav", ele.nav).appendTo("#nav_" + ele.id);
+    $.tmpl(
+      ele.nav.template ? ele.nav.template : "question-nav",
+      ele.nav
+    ).appendTo("#nav_" + ele.id);
 
     wizardLength++;
   });
 
   $(".steps li").removeClass("disabled");
-  
 });
