@@ -134,7 +134,6 @@ function goToPart(part, validate) {
         ? (toSection = doYouhaveMagneticCard)
         : (toSection = doYouHavevehicleLicense);
       nationality = selectedValue;
-      goTo(toSection, validate);
       break;
 
     case "afterWorkedInsideGreenLine":
@@ -153,7 +152,6 @@ function goToPart(part, validate) {
           ? (toSection = doYouHavesecurityBanToEnterIsrael)
           : (toSection = amountOfTheMonthlySalary);
       }
-      goTo(toSection, validate);
       break;
 
     case "afterDateOfLastWorkPermit":
@@ -161,13 +159,12 @@ function goToPart(part, validate) {
       workedInsideGreenLine = getSelectedValue(workedInsideGreenLine);
 
       if (workedInsideGreenLine === yes) {
-        toSection = wereYouGettingASalarySlip;
-        goTo(toSection, validate);
+        toSection = wereYouGettingASalarySlip; 
       } else {
-        toSection = amountOfTheMonthlySalary;
-        goTo(toSection, validate);
+        toSection = amountOfTheMonthlySalary; 
       }
   }
+  goTo(toSection, validate);
 }
 
 function setSelection(name, value) {
