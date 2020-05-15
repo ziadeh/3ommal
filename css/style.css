@@ -1847,14 +1847,14 @@ ol.bjqs-markers {
     filter: brightness(0) invert(1); }
   .icon.settings {
     background-size: 650px;
-    background-position: -80px -12px;
+    background-position: -80px -9px;
     width: 34px;
-    height: 41px; }
+    height: 47px; }
   .icon.profile {
     background-size: 650px;
-    background-position: -146px -9px;
-    width: 34px;
-    height: 41px; }
+    background-position: -144px -9px;
+    width: 36px;
+    height: 47px; }
   .icon.money {
     width: 45px;
     height: 45px;
@@ -2469,6 +2469,9 @@ button.btn {
     .header .container .header-content-center {
       width: 70%;
       height: 30px; }
+    .header .container .site-name {
+      color: white;
+      font-size: 30px; }
 
 @media (min-width: 997px) {
   .header .container .header-content-left {
@@ -3354,7 +3357,6 @@ h1.heading {
   right: -150%;
   opacity: 0;
   bottom: 0;
-  overflow: scroll;
   background: white;
   z-index: 1; }
   .mobile-menu.is-open {

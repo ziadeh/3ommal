@@ -108,7 +108,7 @@ function goTo(toQuestion, questionId) {
 
       prevPage = $("#wizard").steps("getCurrentStep").title;
       pageFlow.push(prevPage);
-      $("#" + id)
+      $(`#${id}`)
         .get(0)
         .click();
     }
@@ -158,11 +158,9 @@ function goToPart(part, validate) {
       let workedInsideGreenLine = "worked_inside_green_line";
       workedInsideGreenLine = getSelectedValue(workedInsideGreenLine);
 
-      if (workedInsideGreenLine === yes) {
-        toSection = wereYouGettingASalarySlip; 
-      } else {
-        toSection = amountOfTheMonthlySalary; 
-      }
+      workedInsideGreenLine === yes
+        ? (toSection = wereYouGettingASalarySlip)
+        : (toSection = amountOfTheMonthlySalary);
   }
   goTo(toSection, validate);
 }
@@ -179,7 +177,7 @@ function setSelection(name, value) {
 }
 
 function getSelectedValue(id) {
-  return $("#" + id + " input:checked").val();
+  return $(`#${id} input:checked`).val();
 }
 
 function questionValidation(questionId) {
@@ -199,8 +197,8 @@ function questionValidation(questionId) {
       case "select-one":
         $(`#${questionId} select`)
           .children("option:selected")
-          .each((idx, e) => {
-            if (!e.value) valid = false;
+          .each((i, ele) => {
+            if (!ele.value) valid = false;
           });
         break;
       case "input":
@@ -233,7 +231,12 @@ function submitForm(questionId) {
     return;
   }
 
+  console.log("######---Form---#####");
   console.log($("form").serializeArray());
+  console.log("######---User Flow---#####");
+  console.log(pageFlow);
+
+
 
   $.tmpl("modal-button", modal).appendTo("#modal");
   $(".modal").toggleClass("show");
@@ -514,6 +517,7 @@ $(document).ready(function () {
       },
     },
   ];
+
   let wizardLength = 0;
 
   //##############################################################################################################################
@@ -525,15 +529,15 @@ $(document).ready(function () {
   $.each(categories, (idx, ele) => {
     $("#wizard").steps("insert", wizardLength, {
       title: ele.title,
-      content: "<div id='" + ele.id + "'></div>",
+      content: `<div id='${ele.id}'></div>`,
     });
     let template = {
       title: ele.title,
       icon: ele.icon,
       id: ele.id,
     };
-    $.tmpl("category-section", template).appendTo("#" + ele.id);
-    $.tmpl("link-icon", ele.data).appendTo("#cat-" + ele.id);
+    $.tmpl("category-section", template).appendTo(`#${ele.id}`);
+    $.tmpl("link-icon", ele.data).appendTo(`#cat-${ele.id}`);
 
     wizardLength++;
   });
@@ -546,16 +550,15 @@ $(document).ready(function () {
   $.each(listOfQuestions, (idx, ele) => {
     $("#wizard").steps("insert", wizardLength, {
       title: ele.question,
-      content:
-        "<div id='" + ele.id + "'></div><div id='nav_" + ele.id + "'></div>",
+      content: `<div id='${ele.id}'></div><div id='nav_${ele.id}'></div>`,
     });
     ele.nav.first ? "" : (ele.nav.first = false);
     ele.nav.last ? "" : (ele.nav.last = false);
-    $.tmpl(ele.template, ele).appendTo("#" + ele.id);
+    $.tmpl(ele.template, ele).appendTo(`#${ele.id}`);
     $.tmpl(
       ele.nav.template ? ele.nav.template : "question-nav",
       ele.nav
-    ).appendTo("#nav_" + ele.id);
+    ).appendTo(`#nav_${ele.id}`);
 
     wizardLength++;
   });
