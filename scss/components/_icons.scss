@@ -5,7 +5,13 @@
     text-indent: -9999px;
     display: inline-block;
     &.icon-lg {
-        zoom: 3;
+        -moz-transform: scale(3,3);
+        -ms-transform: scale(3,3);
+        -webkit-transform: scale(3,3);
+        -o-transform: scale(3,3);
+        transform: scale(3,3);
+        width:104px;
+        height:104px;
     }
     &.white {
         filter: brightness(0) invert(1);
