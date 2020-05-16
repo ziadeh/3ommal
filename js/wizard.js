@@ -37,7 +37,7 @@ $("#wizard").steps({
 function updatePageHeight(currentIndex) {
     setTimeout(() => {
         let nextPageHeight = $("#wizard-p-"+ currentIndex).find("div").first().innerHeight();
-        $("#wizard .content.clearfix").height(nextPageHeight+100);
+        $("#wizard .content.clearfix").height(nextPageHeight+140);
     },150);
 }
 
