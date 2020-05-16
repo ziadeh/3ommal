@@ -9,9 +9,7 @@
         -ms-transform: scale(3,3);
         -webkit-transform: scale(3,3);
         -o-transform: scale(3,3);
-        transform: scale(3,3);
-        width:104px;
-        height:104px;
+        transform: scale(3,3); 
     }
     &.white {
         filter: brightness(0) invert(1);
