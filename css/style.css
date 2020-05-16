@@ -1843,6 +1843,8 @@ ol.bjqs-markers {
   background-position: 0 -13px;
   text-indent: -9999px;
   display: inline-block; }
+  .icon.icon-lg {
+    zoom: 3; }
   .icon.white {
     filter: brightness(0) invert(1); }
   .icon.settings {
@@ -1906,11 +1908,6 @@ ol.bjqs-markers {
     height: 37px;
     background-position: -84px -81px;
     background-size: 680px; }
-    .icon.icon-constructions.icon-lg {
-      width: 105;
-      height: 105;
-      background-position: -226px -220px;
-      background-size: 1850px; }
   .icon.icon-cultivation {
     width: 37px;
     height: 37px;
