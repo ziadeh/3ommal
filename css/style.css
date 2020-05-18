@@ -267,7 +267,7 @@ input[type="date"]::-webkit-clear-button {
   display: none;
   opacity: 0; }
 
-ul.list {
+ul {
   display: block;
   list-style-type: disc;
   margin-block-start: 1em;
@@ -277,9 +277,27 @@ ul.list {
   padding-inline-start: 40px;
   margin-top: 0;
   margin-bottom: 1rem; }
-  ul.list li {
+  ul li {
     display: list-item;
-    text-align: -webkit-match-parent; }
+    text-align: -webkit-match-parent;
+    font-size: 90%;
+    font-weight: normal;
+    line-height: 24px; }
+
+ol {
+  display: block;
+  list-style-type: decimal;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px; }
+  ol li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+    font-size: 90%;
+    font-weight: normal;
+    line-height: 24px; }
 
 .logo {
   width: 129px;
@@ -3390,7 +3408,6 @@ h1.heading {
       vertical-align: middle; }
   .mobile-menu p {
     padding: 0 20px;
-    font-weight: lighter;
     line-height: 24px; }
   .mobile-menu .btn {
     padding: 10px 20px 5px 20px;
@@ -3411,7 +3428,8 @@ h1.heading {
     width: 100%;
     margin-bottom: 20px; }
     .inner-page .inner-menu ul {
-      display: flex; }
+      display: flex;
+      list-style: none; }
       .inner-page .inner-menu ul li {
         padding: 0 5px;
         color: #8E8E8E; }

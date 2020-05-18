@@ -149,7 +149,7 @@ input[type="date"]::-webkit-clear-button {
     display: none; 
     opacity:0; 
 }
-ul.list {
+ul {
     display: block;
     list-style-type: disc;
     margin-block-start: 1em;
@@ -162,5 +162,24 @@ ul.list {
     li {
         display: list-item;
         text-align: -webkit-match-parent;
+        font-size:90%;
+        font-weight: normal;
+        line-height: 24px;
     }
 } 
+ol {
+    display: block;
+    list-style-type: decimal;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    li {
+        display: list-item;
+        text-align: -webkit-match-parent;
+        font-size:90%;
+        font-weight: normal;
+        line-height: 24px;
+    }
+}

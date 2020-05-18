@@ -394,7 +394,6 @@ h1.heading {
   }
   p {
     padding: 0 20px;
-    font-weight: lighter;
     line-height: 24px;
   }
   .btn {
@@ -420,6 +419,7 @@ h1.heading {
     margin-bottom: 20px;
     ul {
       display: flex;
+      list-style: none;
       li {
         padding: 0 5px;
         color: $color-gray;
