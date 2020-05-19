@@ -121,7 +121,7 @@ body {
   text-align: right !important; }
 
 .text-lighter {
-  font-weight: lighter; }
+  font-weight: 300; }
 
 .bg-gray {
   background-color: #E1E1E1; }
@@ -212,6 +212,9 @@ body {
 
 ::placeholder {
   color: #E1E1E1; }
+
+p {
+  line-height: 24px; }
 
 h1 {
   font-size: 150%; }
@@ -2205,7 +2208,8 @@ ol.bjqs-markers {
 .ck-button label {
   margin: 0;
   display: inline;
-  color: #959DAD; }
+  color: #656565;
+  font-weight: 300; }
 
 .ck-button label span {
   display: block;
@@ -3417,7 +3421,10 @@ h1.heading {
   margin: 20px;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.12);
   padding: 20px;
-  color: #8E8E8E; }
+  color: #8E8E8E;
+  max-width: 997px;
+  display: block;
+  margin: 0 auto; }
   .inner-page p, .inner-page h1 {
     margin-bottom: 20px;
     margin-right: 0;

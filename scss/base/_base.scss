@@ -32,7 +32,7 @@ body {
 .text-left { text-align: left;}
 .text-right { text-align: right !important;}
 
-.text-lighter { font-weight: lighter;}
+.text-lighter { font-weight: 300;}
 
 .bg-gray {
     background-color:$color-gray-lighter;
@@ -87,7 +87,9 @@ body {
   }
 
 
-
+p {
+    line-height: 24px;
+}
 h1 {
     font-size: 150%;
 }

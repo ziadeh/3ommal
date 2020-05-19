@@ -117,7 +117,8 @@ $in-w: $n-char*($char-w + $gap);
 .ck-button label {
     margin:0;
     display: inline;
-    color: $color-silver;
+    color: $color-gray-dark;
+    font-weight: 300;
 }
 
 .ck-button label span {

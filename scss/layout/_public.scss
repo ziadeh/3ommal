@@ -406,6 +406,9 @@ h1.heading {
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.12);
   padding: 20px;
   color:$color-gray;
+  max-width: 997px;
+  display: block;
+  margin: 0 auto;
   p, h1 {
     margin-bottom: 20px;
     margin-right: 0;
