@@ -285,13 +285,28 @@
     <script src="./js/vendors/slider.js"></script>
     <script src="./js/vendors/menu-animation.js"></script>
     <script>
+
+      let getWidt = $(window).width(),
+        bannerHeight = 280;
+      if (getWidt > 557) {
+        bannerHeight = 450;
+      }
       jQuery(document).ready(function ($) {
+
+      setTimeout(() => {
+        $("#banner-public li").css("display", "none");
+      }, 0);
+
+      setTimeout(() => {
         $("#banner-public").bjqs({
-          height: 450,
+          height: bannerHeight,
           width: "100%",
           responsive: true,
         });
+      }, 10);
       });
+
+
     </script>
   </body>
 </html>

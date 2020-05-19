@@ -1608,6 +1608,10 @@ ol.bjqs-markers {
     background-color: #0C60BA;
     border-color: #0C60BA; }
 
+#banner-public,
+#banner-fade {
+  z-index: 100; }
+
 /*
     Common 
 */

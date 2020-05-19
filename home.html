@@ -121,12 +121,20 @@
         bannerHeight = 320;
       }
       jQuery(document).ready(function ($) {
+
+      setTimeout(() => {
+        $("#banner-fade li").css("display", "none");
+      }, 0);
+
+      setTimeout(() => {
         $("#banner-fade").bjqs({
           height: bannerHeight,
           width: "100%",
           responsive: true,
         });
+      }, 10);
       });
+
     </script>
   </body>
 </html>
