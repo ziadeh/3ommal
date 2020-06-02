@@ -86,7 +86,7 @@ for (i = 1; i <= 12; i++) {
 //###############################################---Handle Next Question---#####################################################
 //##############################################################################################################################
 
-function goTo(toQuestion, questionId) {
+function goTo(toQuestion, questionId, extraValidation) {
   if (!toQuestion) return;
   if (toQuestion === whatIsIdType) {
     $(".page-icon").show();
@@ -99,7 +99,7 @@ function goTo(toQuestion, questionId) {
 
     if (title === toQuestion) {
       if (questionId) {
-        canPass = questionValidation(questionId);
+        canPass = questionValidation(questionId, extraValidation);
         if (!canPass) {
           showMessage();
           return;
@@ -180,7 +180,7 @@ function getSelectedValue(id) {
   return $(`#${id} input:checked`).val();
 }
 
-function questionValidation(questionId) {
+function questionValidation(questionId, extraValidation) {
   let valid = true,
     getVal = undefined,
     inputType = undefined;
@@ -212,7 +212,12 @@ function questionValidation(questionId) {
     }
     if (!valid) return false;
   });
-
+  if(extraValidation) {
+    switch(extraValidation) {
+      case "min-100": 
+       if(getVal< 100) valid = false;
+    }
+  }
   return valid;
 }
 
@@ -393,6 +398,7 @@ $(document).ready(function () {
         action: "goTo",
         action_prop: haveYouTakenAPublicSafetyCourseAtWork,
         validate: "amount_of_the_monthly_salary",
+        extra_validation: "min-100"
       },
     },
     //##############################################################################################################################
